@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calcular Juros Simples</title>
+</head>
+<body>
+    <h1>Calculadora Juros Simples</h1>
+    <input type="number" id="capital" placeholder="Insira o capital">
+    <input type="number" id="taxa" placeholder="Insira a taxa já em decimais">
+    <input type="number" id="tempo" placeholder="Insira o tempo">
+    
+    <button id="Calcular" onclick="calcular()">Calcular</button>
+
+    <p>O Juros é de: <span id="media"></span></p>
+    <p id="status"></p>
+
+    <script>
+        function calcular() {
+            var n1 = parseFloat(document.getElementById('capital').value);
+            var n2 = parseFloat(document.getElementById('taxa').value);
+            var n3 = parseFloat(document.getElementById('tempo').value);
+    
+
+            var Juros = (n1 * n2 * n3);
+
+            document.getElementById('media').innerHTML = Juros.toFixed(2);
+        }
+    </script>
+</body>
+</html>
